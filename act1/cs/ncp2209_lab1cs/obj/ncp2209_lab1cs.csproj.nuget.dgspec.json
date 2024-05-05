@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\timothyjtc\\source\\_uecpe\\ncp2209_exp1labact1\\lab1cs\\ncp2209_lab1cs\\ncp2209_lab1cs.csproj": {}
+    "C:\\Users\\timothyjtc\\source\\_uecpe\\oslab\\act1\\cs\\ncp2209_lab1cs\\ncp2209_lab1cs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\timothyjtc\\source\\_uecpe\\ncp2209_exp1labact1\\lab1cs\\ncp2209_lab1cs\\ncp2209_lab1cs.csproj": {
+    "C:\\Users\\timothyjtc\\source\\_uecpe\\oslab\\act1\\cs\\ncp2209_lab1cs\\ncp2209_lab1cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timothyjtc\\source\\_uecpe\\ncp2209_exp1labact1\\lab1cs\\ncp2209_lab1cs\\ncp2209_lab1cs.csproj",
+        "projectUniqueName": "C:\\Users\\timothyjtc\\source\\_uecpe\\oslab\\act1\\cs\\ncp2209_lab1cs\\ncp2209_lab1cs.csproj",
         "projectName": "ncp2209_lab1cs",
-        "projectPath": "C:\\Users\\timothyjtc\\source\\_uecpe\\ncp2209_exp1labact1\\lab1cs\\ncp2209_lab1cs\\ncp2209_lab1cs.csproj",
+        "projectPath": "C:\\Users\\timothyjtc\\source\\_uecpe\\oslab\\act1\\cs\\ncp2209_lab1cs\\ncp2209_lab1cs.csproj",
         "packagesPath": "C:\\Users\\timothyjtc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timothyjtc\\source\\_uecpe\\ncp2209_exp1labact1\\lab1cs\\ncp2209_lab1cs\\obj\\",
+        "outputPath": "C:\\Users\\timothyjtc\\source\\_uecpe\\oslab\\act1\\cs\\ncp2209_lab1cs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timothyjtc\\AppData\\Roaming\\NuGet\\NuGet.Config"
