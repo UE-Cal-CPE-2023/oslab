@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <termios.h>
+#include <unistd.h>
+
+/* reads from keypress, doesn't echo */
+int getch(void)
+{
+    struct termios oldattr, newattr;
+    int ch;
+    tcgetattr( STDIN_FILENO, &oldattr );
+    newattr = oldattr;
+    newattr.c_lflag &= ~( ICANON | ECHO );
+    tcsetattr( STDIN_FILENO, TCSANOW, &newattr );
+    ch = getchar();
+    tcsetattr( STDIN_FILENO, TCSANOW, &oldattr );
+    return ch;
+}
+
+int main() {
+    int ms, bs, nob, ef,n,
+    mp[10],tif=0; int i,p=0;
+    system("clear");
+    printf("Enter the total memory available (in Bytes) -- ");
+    scanf("%d",&ms);
+    printf("Enter the block size (in Bytes) -- ");
+    scanf("%d", &bs);
+    nob = ms/bs;
+    ef = ms - nob*bs;
+    printf("\nEnter the number of processes -- ");
+    scanf("%d",&n);
+    for(i=0;i<n;i++) {
+        printf("Enter memory required for process %d (in Bytes)-- ",i+1);
+        scanf("%d",&mp[i]);
+    }
+    printf("\nNo. of Blocks available in memory--%d",nob);
+    printf("\n\nPROCESS\tMEMORYREQUIRED\tALLOCATED\tINTERNAL FRAGMENTATION");
+    for(i=0;i<n && p<nob;i++) {
+        printf("\n %d\t\t%d",i+1,mp[i]);
+        if(mp[i] > bs)
+            printf("\t\tNO\t\t---");
+        else {
+            printf("\t\tYES\t%d",bs-mp[i]);
+            tif = tif + bs-mp[i];
+            p++;
+        }
+    }
+    if(i<n)
+        printf("\nMemory is Full, Remaining Processes cannot be accomodated");
+        printf("\n\nTotal Internal Fragmentation is %d",tif);
+        printf("\nTotal External Fragmentation is %d\n",ef);
+        getch();
+}
